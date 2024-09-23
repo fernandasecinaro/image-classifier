@@ -1,66 +1,27 @@
-# NEW-PROJECT-NAME
+# Dog breed classifier
 
-## Using this template
-**WARNING! This template is meant to be used in systems based on MacOS. If you want to run this on a AWS Linux based system (such as SageMaker Studio), please refer to the appropriate template**
-*Please delete this section after installing the necessary working tools*
+WARNING! This project is meant to be used in systems based on MacOS.
 
-**Step 0: clone this repository**
+## Steps to run project
 
 ### Environment Setup (Requirements)
-*If you have ran these commands previously, you can ignore this section. If you have doubts, you can safely run them without the risk of negative side effects*
 
-Make sure you have homebrew and xcode installed. If you don't, follow these steps:
-1. Install Homebrew. You can do this by running the following command:
-```zsh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-2. Install developer tools with the following command:
-```zsh
-xcode-select --install
-``` 
+Make sure you have homebrew and xcode installed.
 
 ### Tools Setup
-With the tools mentioned above installed, you can now install the tools needed:<br>
-3. Run `make install-tools`. This will install general tools<br>
-4. run `source ~/.zshrc` or open a new terminal for the changes to take effect
 
-### Project Setup (New Project)
-*Use `project-setup` if you are starting a new project*<br>
-5. Choose a Python version and run the following command: `make project-setup PYTHON=3.10.13`.<br>*In this example we chose Python 3.10.13*<br>
+With the tools mentioned above installed, you can now install the tools needed:<br> 3. Run `make install-tools`. This will install general tools<br> 4. run `source ~/.zshrc` or open a new terminal for the changes to take effect
 
+### Project Setup
 
-### Project Setup (Existing Project)
-*Use `project-install` if you are installing an existing project*<br>
-5. Run `make project-install`
-
-### Explanation
-These commands will install the following tools:
-- pypenv: Python version manager
-    - try running `pyenv versions` to see the Python version you just installed
-- pipx: Python package manager. We will only use this to install `poetry`
-    - try running `pipx list` to see the packages you just installed.
-- poetry: Python dependency manager
-    - try running `poetry env list` to see the Python environment you just created
-    - try running `poetry shell` to activate that virtual environment
-- ipykernel:
-    - the `kernelspec` command is part of `ipython`, on which `jupyter` is based.<br>The kernel for your current environmnent was installed through the `ipykernel` module.<br>Try running `jupyter kernelspec list` to see the kernel you have installed (make sure you have activated the virtual environment with `poetry shell`)
-
-So, now you should have a Python dependency manager (poetry) that also takes care of the virtual environment for you. You should also have a jupyter kernel based on that virtual environment. You can now start working on your project. Run `jupyter-lab` directly on your terminal to start the jupyter server<br>
-For more information on how to use these tools, please refer to the `TOOLS.md` file.
-
----
-
-## Description
-Brief description of the project. **Must include project's objective and scope**
-
-## Installation
-Instructions on how to install the project
+Run `make project-install`
 
 ## Usage
-Instructions on how to use the project
 
-## Contributing
-Instructions on how to contribute to the project
+To predict a new image:
 
-## References
-Link to references used in the project (Books, posts, videos, courses, repos, etc.)
+1. Add the image to "extra-images" folder
+
+2. Go to "4-predict.ipynb" file
+
+3. Change the argument of the "predict" call (second cell) to the filename you want to predict
